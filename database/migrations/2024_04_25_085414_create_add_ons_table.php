@@ -14,10 +14,11 @@ return new class extends Migration
         Schema::create('add_ons', function (Blueprint $table) {
             $table->id();
             $table->string('add_on_name');
-            $table->double('add_on_price');
+            $table->decimal('add_on_price', 8,2);
+            $table->timestamps();
         });
     }
-
+ 
     /**
      * Reverse the migrations.
      */

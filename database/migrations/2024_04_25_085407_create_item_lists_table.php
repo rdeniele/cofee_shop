@@ -14,11 +14,12 @@ return new class extends Migration
         Schema::create('item_lists', function (Blueprint $table) {
             $table->id();
             $table->string('item_name');
-            $table->double('item_amount');
-            $table->double('item_price');
+            $table->integer('item_amount');
+            $table->decimal('item_price', 8,2);
+            $table->timestamps();
         });
     }
-
+ 
 
     /**
      * Reverse the migrations.

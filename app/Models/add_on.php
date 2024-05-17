@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class add_on extends Model
 {
     use HasFactory;
+    protected $fillable= ['add_on_name','add_on_price','created_at', 'updated_at',];
 }
+ 
